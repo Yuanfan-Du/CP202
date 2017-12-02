@@ -1919,4 +1919,9 @@ textarea {
 .badge-icon {
   width: 24px;
 }
+
+#popular-restaurant img{
+  width: 252px; 
+  height: 252px;
+}
 /*# sourceMappingURL=style.css.map */
