@@ -277,19 +277,11 @@
 
 				};
 
-				function searchCallback (results, status, pagination) {
-					console.log('status:', status, 'results:', results);
+				function searchCallback (results, status, pagination) {					
+					restaurantsInfo = [];
 					if(status === google.maps.places.PlacesServiceStatus.OK){
 						buildRestaurantsArray(results);
 						renderRestaurantList();
-						/*$('#more_button').attr('disabled', false);
-
-						if(pagination.hasNextPage) {
-							$('#more_button').click(function(){
-								$(this).attr('disabled', true);
-								pagination.nextPage();
-							})
-						}*/
 					}
 					else{
 						return false;
@@ -354,12 +346,11 @@
 						});
 						subtotal += menu[category][id-1].price;
 						$('#amount').text(subtotal.toFixed(2));
-					});
-
-					
+					});	
 				}
 
 				function renderRestaurantList () {
+					$('#restaurants-list').empty();
 					var restautantInfoHtml = restaurantsInfo.map(function(r, index){
 						return `<div class='row' id=${index} style='background: #fff;border-bottom: 1px solid #000; padding: 5px;'><div class="col-md-1"><img src=${r.logo} style="width:80px; height: 80px; border: 1px solid #999"></div><div class='col-md-6'><p>${r.name}</p><p style='font-size: 14px;'>${r.address}</p></div><div class='col-md-3'><p class="distance-text">${r.distance} KM</p><p class='distance-text'>20 mins</p></div><p class='col-md-2'>${r.rating}</p></div>`
 					})
