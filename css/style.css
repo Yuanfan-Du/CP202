@@ -1914,4 +1914,8 @@ textarea {
   line-height: 30px;
   cursor: pointer;
 }
+
+.badge-icon {
+  width: 24px;
+}
 /*# sourceMappingURL=style.css.map */
