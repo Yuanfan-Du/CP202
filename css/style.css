@@ -1930,6 +1930,10 @@ textarea {
   width: 400px;
 }
 
+#contact-map-heading{
+  color: #fff;
+}
+
 .fh5co-social-icons span{
   display: none;
 }
