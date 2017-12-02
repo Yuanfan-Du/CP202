@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
-.nav #logo {
+.nav #logo_title {
   font-size: 32px;
   margin: 0;
   padding: 0;
@@ -1923,5 +1923,10 @@ textarea {
 #popular-restaurant img{
   width: 252px; 
   height: 252px;
+}
+
+#about_img{
+  transform: rotate(-90deg);
+  width: 400px;
 }
 /*# sourceMappingURL=style.css.map */
